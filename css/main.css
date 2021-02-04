@@ -1,0 +1,173 @@
+@import 'blogItem.css';
+@import 'blogpost.css';
+@import 'smallScreen.css';
+@import 'sizes.css';
+
+:root {
+    --background: #f4f8fa;
+    --boxes: #dbe5eb;
+    --background-inactive: #edf2f5;
+    --grey: #707070;
+    --lightgrey: #bfcfd8;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    background-color: var(--background);
+    margin: 0;
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--background-inactive);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    height: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a,
+nav img {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+nav a:nth-child(even) {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--boxes);
+    border-right: 1px solid var(--boxes);
+}
+
+.header {
+    grid-area: header;
+}
+
+.header > img {
+    width: 40px;
+    height: 40px;
+}
+
+.introduction {
+    grid-area: introduction;
+}
+
+.content-index {
+    grid-area: content;
+}
+
+.content-blogpost {
+    grid-area: content;
+}
+
+footer {
+    bottom: 0px;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--boxes);
+    align-items: center;
+    padding: 0 10px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    text-decoration: 0;
+    color: black;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.content-subscribe {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+.content-subscribe form {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid var(--lightgrey);
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.content-subscribe form label {
+    text-align: left;
+}
+
+.content-subscribe form input {
+    border-radius: 10px;
+}
+
+.content-subscribe form #submit {
+    justify-self: center;
+    grid-column: 1/3;
+    width: 120px;
+}
+
+#blogpost-1 {
+    background-image: url('../images/ES6.png');
+}
+#blogpost-2 {
+    background-image: url('../images/tspost.png');
+}
+#blogpost-3 {
+    background-image: url('../images/front-end-back.png');
+}
+#blogpost-4 {
+    background-image: linear-gradient(
+        90deg,
+        hsl(56, 100%, 7%) 0%,
+        hsl(56, 86%, 25%) 35%,
+        hsl(56, 100%, 50%) 100%
+    );
+}
+
+#blogpost-5 {
+    background-image: linear-gradient(
+        90deg,
+        hsl(102, 100%, 7%) 0%,
+        hsl(102, 86%, 25%) 35%,
+        hsl(102, 100%, 50%) 100%
+    );
+}
+.blogpost-lorem {
+    background-image: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(0, 212, 255, 1) 100%
+    );
+}
+
+figcaption {
+    text-align: center;
+}
+
+#nav-search {
+    width: 30px;
+    height: 30px;
+}

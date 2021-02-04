@@ -1,0 +1,80 @@
+.blog-item {
+    display: grid;
+    border: 3px solid var(--lightgrey);
+    background-color: var(--background-inactive);
+    border-radius: 20px;
+    grid-template-columns: 4em 1fr auto;
+    grid-template-areas:
+        'imgPost title '
+        'imgPost author '
+        'imgPost shortText'
+        'imgPost readTime';
+    column-gap: 1em;
+    row-gap: 5px;
+}
+
+.blog-item .img-post {
+    grid-area: imgPost;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-size: contain;
+    background-position: center;
+}
+
+.blog-item:hover {
+    cursor: pointer;
+}
+
+.blog-item h2 {
+    grid-area: title;
+    margin-bottom: 10px;
+}
+
+.blog-item .short-text {
+    grid-area: shortText;
+    overflow-y: hidden;
+    display: -webkit-box;
+    height: 3.4em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    padding-right: 50px;
+}
+
+.blog-item .read-time {
+    grid-area: readTime;
+    align-self: end;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+.blog-item .author {
+    justify-self: start;
+    margin-right: 20px;
+    grid-area: author;
+    display: grid;
+    grid-template-columns: 3em 1fr;
+    grid-template-areas:
+        'imgAuthor name'
+        'imgAuthor job';
+    column-gap: 5px;
+}
+
+.blog-item .author img {
+    grid-area: imgAuthor;
+    border-radius: 50%;
+    height: 2.5em;
+    margin: auto 0;
+}
+
+.blog-item .author p {
+    margin: 0;
+}
+
+.blog-item .author .name {
+    align-self: end;
+}
+
+.blog-item .author .jop {
+    color: gray;
+}
